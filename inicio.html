@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patria - Inicio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+    }
+
+
+    header {
+      background-color: #8c8c8c;
+      padding: 6px 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 13px;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 6px 15px;
+      display: block;
+    }
+
+
+    nav a.active {
+      background-color: #b3b3b3;
+      border-radius: 12px;
+      padding: 6px 40px;
+      box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2);
+    }
+
+
+    .flag-container {
+      display: flex;
+      flex: 1;
+      width: 100%;
+    }
+
+    .stripe {
+      flex: 1;
+      height: 100%;
+    }
+
+
+    .green {
+      background-color: #006847;
+    }
+
+
+    .white {
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+
+    .flag-img {
+      max-width: 90px;
+      height: auto;
+      margin-bottom: 15px;
+    }
+
+
+    .date-title {
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+
+    .text-green { color: #006847; }
+    .text-red { color: #ce1126; }
+
+
+    .main-title {
+      font-family: 'Times New Roman', Times, serif;
+      color: #c49219;
+      font-size: 32px;
+      font-weight: bold;
+      text-transform: uppercase;
+      line-height: 1.2;
+      letter-spacing: 1px;
+    }
+
+
+    .red {
+      background-color: #ce1126;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      padding-bottom: 20px;
+    }
+
+
+    .author-info {
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: bold;
+      text-align: center;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+
+
+  <main class="flag-container">
+    
+
+    <section class="stripe green"></section>
+
+
+    <section class="stripe white">
+
+      <img src="mexico.png" width="450" height="250" alt="Bandera" >
+
+
+      <div class="date-title">
+        <span class="text-green">16 DE SEPT</span><span class="text-red">IEMBRE</span>
+      </div>
+
+
+      <h1 class="main-title">
+        DÍA DE LA<br>INDEPENDENCIA
+      </h1>
+    </section>
+
+
+    <section class="stripe red">
+      <div class="author-info">
+        RAMOS FLORES PEDRO ALEXIS<br>
+        5-I<br>
+        0643
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
