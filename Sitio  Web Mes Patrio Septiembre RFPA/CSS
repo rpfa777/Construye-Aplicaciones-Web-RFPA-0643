@@ -1,0 +1,327 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: #f0f0f0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* NAVEGACIÓN PRINCIPAL */
+header {
+    width: 100%;
+    background-color: #9c9c9c;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 100;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0 10px;
+    transition: background-color 0.2s;
+}
+
+nav a:hover, nav a.activo {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+/* ESTRUCTURA GENERAL DE 3 COLUMNAS */
+.contenido-principal {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    flex: 1;
+    width: 100%;
+}
+
+/* FRANJAS TRICOLOR */
+.franja-verde {
+    background-color: #006338;
+    height: 100%;
+}
+
+.franja-blanca {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    height: 100%;
+}
+
+.franja-roja {
+    background-color: #e31b23;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 30px;
+    height: 100%;
+}
+
+/* --- INICIO --- */
+.imagen-central {
+    max-width: 170px;
+    height: auto;
+    margin-bottom: 20px;
+    object-fit: contain;
+}
+
+.fecha {
+    font-size: 1.6rem;
+    font-weight: 900;
+    margin-bottom: 25px;
+    letter-spacing: 0.5px;
+}
+
+.fecha .verde { color: #006338; }
+.fecha .café { color: #8b5a2b; }
+.fecha .rojo { color: #e31b23; }
+
+.titulo {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    color: #c58b00; 
+    font-size: 2.6rem;
+    font-weight: bold;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.datos-alumno {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+/* --- FECHAS IMPORTANTES --- */
+.contenedor-fechas {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: #e31b23;
+}
+
+.banner-verde {
+    background-color: #006338;
+    padding: 35px 20px;
+    text-align: center;
+}
+
+.banner-verde h1 {
+    color: #ffffff;
+    font-size: 2.8rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.contenedor-linea {
+    background-color: #ffffff;
+    padding: 40px 15px;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.linea-tiempo {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+    min-width: 950px;
+    align-items: center;
+}
+
+.evento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.area-arriba, .area-abajo {
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 5px;
+}
+
+.texto-evento {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #000000;
+    line-height: 1.25;
+}
+
+.img-evento {
+    max-width: 125px;
+    max-height: 95px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+}
+
+.area-centro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.ano {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #000000;
+}
+
+.flecha {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #000000;
+    margin-left: 8px;
+}
+
+.franja-roja-abajo {
+    flex: 1;
+    background-color: #e31b23;
+    min-height: 50px;
+}
+
+/* --- PERSONAJES ILUSTRADOS --- */
+.franja-blanca-personajes {
+    background-color: #ffffff;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    justify-content: center;
+    height: 100%;
+}
+
+.bloque-personaje {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.img-personaje {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    flex-shrink: 0;
+}
+
+.texto-personaje {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #000000;
+    line-height: 1.35;
+    text-align: center;
+    max-width: 320px;
+}
+
+/* --- DATOS CURIOSOS Y MITOS --- */
+.columna-mitos {
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    height: 100%;
+    justify-content: space-around;
+}
+
+.columna-mitos.verde {
+    background-color: #006338;
+    color: #ffffff;
+}
+
+.columna-mitos.blanca {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.columna-mitos.roja {
+    background-color: #e31b23;
+    color: #ffffff;
+}
+
+.titulo-mitos {
+    font-size: 2.2rem;
+    font-weight: 900;
+    text-align: center;
+    line-height: 1.1;
+    margin-bottom: 5px;
+}
+
+.texto-mito {
+    font-size: 0.88rem;
+    font-weight: bold;
+    line-height: 1.3;
+    text-align: center;
+}
+
+.texto-mito.bullet {
+    font-weight: normal;
+}
+
+.img-mito {
+    width: 85%;
+    max-width: 240px;
+    height: auto;
+    max-height: 130px;
+    object-fit: cover;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.25);
+}
+
+/* RESPONSIVO MÓVIL */
+@media (max-width: 768px) {
+    header { height: auto; }
+    nav { grid-template-columns: 1fr 1fr; }
+    .contenido-principal { grid-template-columns: 1fr; }
+    .franja-verde, .franja-roja { min-height: 80px; }
+    .franja-roja { padding: 30px 10px; }
+    .banner-verde h1 { font-size: 2rem; }
+    .bloque-personaje { flex-direction: column; }
+}
