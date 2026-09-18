@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Personajes Ilustrados</title>
+
+  <!-- ESTILOS CSS                                -->
   <style>
     * {
       margin: 0;
@@ -21,6 +23,7 @@
       background-color: #ffffff;
     }
 
+    /* Estilos de la barra de navegación */
     header {
       background-color: #8c8c8c;
       padding: 6px 10px;
@@ -51,6 +54,7 @@
       box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2);
     }
 
+    /* Estilos del contenedor estilo Bandera */
     .flag-container {
       display: flex;
       flex: 1;
@@ -62,10 +66,12 @@
       flex: 1;
     }
 
+    /* Franja Verde */
     .green {
       background-color: #006338;
     }
 
+    /* Franja Blanca y Tarjetas de Personajes */
     .white {
       background-color: #ffffff;
       display: flex;
@@ -103,6 +109,7 @@
       flex: 1;
     }
 
+    /* Franja Roja y Datos del Alumno */
     .red {
       background-color: #e31b23;
       display: flex;
@@ -123,12 +130,30 @@
 </head>
 <body>
 
+
+  <!-- ENCABEZADO Y MENÚ DE NAVEGACIÓN            -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">INICIO</a></li>
+        <li><a href="fechas.html">FECHAS IMPORTANTES</a></li>
+        <li><a href="personajes.html" class="active">PERSONAJES ILUSTRADOS</a></li>
+        <li><a href="datos.html">DATOS CURIOSOS Y MITOS</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <!-- ESTRUCTURA PRINCIPAL DE LA BANDERA            -->
   <main class="flag-container">
     
+    <!-- FRANJA VERDE -->
     <section class="stripe green"></section>
 
+    <!-- FRANJA BLANCA: TARJETAS DE PERSONAJES -->
     <section class="stripe white">
 
+      <!-- Personaje Benito Juárez -->
       <article class="character-card">
         <img src="Benito.png" alt="Benito Juárez" class="character-img">
         <p class="character-text">
@@ -136,6 +161,7 @@
         </p>
       </article>
 
+      <!-- Personaje Emiliano Zapata -->
       <article class="character-card">
         <p class="character-text">
           <strong>Emiliano Zapata (1879-1919)</strong>, conocido como el «Caudillo del Sur», fue uno de los principales líderes de la Revolución Mexicana. Defensor de los derechos campesinos, promulgó el Plan de Ayala para exigir la devolución de tierras a los pueblos originarios y popularizó el célebre lema: «Tierra y Libertad».
@@ -143,6 +169,7 @@
         <img src="Zapata.png" alt="Emiliano Zapata" class="character-img">
       </article>
 
+      <!-- Personaje Miguel Hidalgo -->
       <article class="character-card">
         <img src="Hidalgo.png" alt="Miguel Hidalgo" class="character-img">
         <p class="character-text">
@@ -150,6 +177,7 @@
         </p>
       </article>
 
+      <!-- Personaje Porfirio Díaz -->
       <article class="character-card">
         <p class="character-text">
           <strong>Porfirio Díaz</strong> fue el militar y presidente que gobernó México por más de 30 años (el Porfiriato); impulsó la modernización, la industria y los ferrocarriles, pero su régimen autoritario y la desigualdad social detonaron la Revolución Mexicana.
@@ -159,6 +187,7 @@
 
     </section>
 
+   <!--Footer con datos de alumno-->
     <section class="stripe red">
       <div class="footer-info">
         <p>RAMOS FLORES PEDRO ALEXIS</p>
