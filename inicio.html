@@ -4,7 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Patria - Inicio</title>
+
+
+  <!-- ESTILOS CSS                                -->
+
   <style>
+
     * {
       margin: 0;
       padding: 0;
@@ -18,9 +23,10 @@
       height: 100vh;
       width: 100vw;
       overflow: hidden;
+      background-color: #ffffff;
     }
 
-
+    /* Estilos de la Barra de Navegación */
     header {
       background-color: #8c8c8c;
       padding: 6px 10px;
@@ -44,7 +50,6 @@
       display: block;
     }
 
-
     nav a.active {
       background-color: #b3b3b3;
       border-radius: 12px;
@@ -52,7 +57,7 @@
       box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2);
     }
 
-
+    /* Estilos del Contenedor Principal (Bandera) */
     .flag-container {
       display: flex;
       flex: 1;
@@ -64,12 +69,12 @@
       height: 100%;
     }
 
-
+    /* Franja Verde */
     .green {
       background-color: #006847;
     }
 
-
+    /* Franja Blanca y Contenido Central */
     .white {
       background-color: #ffffff;
       display: flex;
@@ -80,13 +85,11 @@
       padding: 20px;
     }
 
-
     .flag-img {
       max-width: 90px;
       height: auto;
       margin-bottom: 15px;
     }
-
 
     .date-title {
       font-size: 20px;
@@ -98,7 +101,6 @@
     .text-green { color: #006847; }
     .text-red { color: #ce1126; }
 
-
     .main-title {
       font-family: 'Times New Roman', Times, serif;
       color: #c49219;
@@ -109,16 +111,14 @@
       letter-spacing: 1px;
     }
 
-
+    /* Franja Roja y Datos de Alumno */
     .red {
       background-color: #ce1126;
-      position: relative;
       display: flex;
-      justify-content: center;
+      justify-content: flex-end;
       align-items: flex-end;
-      padding-bottom: 20px;
+      padding: 20px;
     }
-
 
     .author-info {
       color: #ffffff;
@@ -126,39 +126,55 @@
       font-weight: bold;
       text-align: center;
       line-height: 1.4;
+      letter-spacing: 0.5px;
     }
   </style>
 </head>
 <body>
 
+  <!-- ENCABEZADO Y MENÚ DE NAVEGACIÓN            -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">INICIO</a></li>
+        <li><a href="fechas.html">FECHAS IMPORTANTES</a></li>
+        <li><a href="personajes.html">PERSONAJES ILUSTRADOS</a></li>
+        <li><a href="datos.html">DATOS CURIOSOS Y MITOS</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ESTRUCTURA PRINCIPAL DE BANDERA            -->
 
   <main class="flag-container">
-    
 
+    <!-- 1. FRANJA VERDE -->
     <section class="stripe green"></section>
 
-
+    <!-- 2. FRANJA BLANCA: LOGO FECHA Y TÍTULO -->
     <section class="stripe white">
 
-      <img src="mexico.png" width="450" height="250" alt="Bandera" >
+      <!-- Imagen de mexico -->
+      <img src="mexico.png" width="450" height="250" alt="Bandera">
 
-
+      <!-- Fecha de titulo -->
       <div class="date-title">
         <span class="text-green">16 DE SEPT</span><span class="text-red">IEMBRE</span>
       </div>
 
-
+      <!-- Título Principal -->
       <h1 class="main-title">
         DÍA DE LA<br>INDEPENDENCIA
       </h1>
+
     </section>
 
-
+    <!-- 3. Footer DATOS DE ALUMNO -->
     <section class="stripe red">
       <div class="author-info">
-        RAMOS FLORES PEDRO ALEXIS<br>
-        5-I<br>
-        0643
+        <p>RAMOS FLORES PEDRO ALEXIS</p>
+        <p>5-I</p>
+        <p>0643</p>
       </div>
     </section>
 
