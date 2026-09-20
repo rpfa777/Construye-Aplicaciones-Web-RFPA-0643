@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <!-- Para que se muestren bien los acentos y las letras eñes -->
   <meta charset="UTF-8">
+  <!-- Hace que la página se acomode bien en celulares -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fechas Importantes - Línea del Tiempo</title>
 
-  <!-- ESTILOS CSS                                -->
-
   <style>
-    
+    /* Quita los márgenes feos por defecto y cambia la letra de toda la página */
     * {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
+      box-sizing: border-box; /* Evita que los bordes o rellenos agranden las cajas */
       font-family: Arial, Helvetica, sans-serif;
     }
 
+    /* Estructura general de la página para que llene la pantalla verticalmente */
     body {
       display: flex;
       flex-direction: column;
@@ -24,13 +25,14 @@
       background-color: #ffffff;
     }
 
-    /* Parte Superior */
+    /* Banner verde de la parte de arriba */
     .header-banner {
       background-color: #006338;
       padding: 25px 10px;
       text-align: center;
     }
 
+    /* Estilo del título principal en letras blancas */
     .header-banner h1 {
       color: #ffffff;
       font-size: 32px;
@@ -39,16 +41,17 @@
       text-transform: uppercase;
     }
 
-    /* Contenedor Principal de la Línea del Tiempo */
+    /* Contenedor principal que pone los eventos de la línea del tiempo de lado a lado */
     .timeline-container {
       display: flex;
       justify-content: space-around;
       align-items: center;
       padding: 40px 20px;
       background-color: #ffffff;
-      flex: 1;
+      flex: 1; /* Ocupa el espacio sobrante entre el título y el footer */
     }
 
+    /* Cada bloque individual de fecha (ocupa un 15% de ancho) */
     .timeline-item {
       display: flex;
       flex-direction: column;
@@ -57,7 +60,7 @@
       text-align: center;
     }
 
-    /* Texto e Imágenes */
+    /* Cajas para poner el texto y las imágenes arriba o abajo */
     .slot-top, .slot-bottom {
       height: 160px;
       display: flex;
@@ -66,6 +69,7 @@
       width: 100%;
     }
 
+    /* Formato del texto que explica cada evento */
     .slot-top p, .slot-bottom p {
       font-size: 12px;
       font-weight: bold;
@@ -74,6 +78,7 @@
       padding: 0 5px;
     }
 
+    /* Tamaño, marco y sombra de las fotos de la línea del tiempo */
     .slot-top img, .slot-bottom img {
       max-width: 100%;
       max-height: 140px;
@@ -82,7 +87,7 @@
       box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
     }
 
-    /* Visualización de Años y Flechas */
+    /* Formato del año centrado y en grande */
     .year-display {
       font-size: 26px;
       font-weight: 900;
@@ -91,22 +96,24 @@
       white-space: nowrap;
     }
 
+    /* Separa un poco la flecha del número del año */
     .year-display span.arrow {
       font-weight: normal;
       margin-left: 4px;
     }
 
-    /*Footer */
+    /* Pie de página rojo Footer */
     footer {
       background-color: #e31b23;
       height: 220px;
       width: 100%;
       display: flex;
-      justify-content: flex-end;
+      justify-content: flex-end; /* Empuja la información a la derecha */
       align-items: center;
       padding-right: 40px;
     }
 
+    /* Texto blanco centrado con mis datos */
     .footer-info {
       color: #ffffff;
       font-size: 12px;
@@ -119,18 +126,15 @@
 </head>
 <body>
 
-
-  <!-- PARTE SUPERIOR DE TÍTULO                  -->
-
+  <!-- Título principal de arriba -->
   <section class="header-banner">
     <h1>FECHAS IMPORTANTES</h1>
   </section>
 
-  <!-- LÍNEA DEL TIEMPO      -->
-
+  <!-- Contenedor con todos los eventos de la línea del tiempo -->
   <main class="timeline-container">
 
-    <!-- Evento 1325 -->
+    <!-- Evento 1325 (Texto arriba, Foto abajo) -->
     <div class="timeline-item">
       <div class="slot-top">
         <p>Fundación de México-Tenochtitlan.</p>
@@ -141,7 +145,7 @@
       </div>
     </div>
 
-    <!-- Evento 1521 -->
+    <!-- Evento 1521 (Foto arriba, Texto abajo) -->
     <div class="timeline-item">
       <div class="slot-top">
         <img src="1521.png" width="180" height="140" alt="Caída de Tenochtitlan">
@@ -152,7 +156,7 @@
       </div>
     </div>
 
-    <!-- Evento 1810 -->
+    <!-- Evento 1810 (Texto arriba, Foto abajo) -->
     <div class="timeline-item">
       <div class="slot-top">
         <p>Grito de Dolores e inicio de la Independencia de México.</p>
@@ -163,7 +167,7 @@
       </div>
     </div>
 
-    <!-- Evento 1910 -->
+    <!-- Evento 1910 (Foto arriba, Texto abajo) -->
     <div class="timeline-item">
       <div class="slot-top">
         <img src="1910.png" width="180" height="140" alt="Revolución Mexicana">
@@ -174,7 +178,7 @@
       </div>
     </div>
 
-    <!-- Evento 1917 -->
+    <!-- Evento 1917 (Texto arriba, Foto abajo) -->
     <div class="timeline-item">
       <div class="slot-top">
         <p>Promulgación de la Constitución Política actual.</p>
@@ -185,7 +189,7 @@
       </div>
     </div>
 
-    <!-- Evento 2024 -->
+    <!-- Evento 2024 (Foto arriba, Texto abajo y sin flecha por ser el último) -->
     <div class="timeline-item">
       <div class="slot-top">
         <img src="2024.png" width="180" height="140" alt="Claudia Sheinbaum">
@@ -198,9 +202,7 @@
 
   </main>
 
-
-  <!-- Footer (DATOS DEL ALUMNO)           -->
-
+  <!-- Footer con mis datos -->
   <footer>
     <div class="footer-info">
       <p>RAMOS FLORES PEDRO ALEXIS</p>
