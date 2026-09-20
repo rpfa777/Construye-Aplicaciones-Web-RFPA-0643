@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <!-- Permite mostrar acentos y letras eñes sin problemas -->
   <meta charset="UTF-8">
+  <!-- Ajusta la vista para pantallas de teléfonos celulares -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Datos Curiosos y Mitos</title>
 
-  <!-- ESTILOS CSS                                -->
-
   <style>
-
+    /* Reset básico: quita espacios por defecto y evita que los bordes agranden las cajas */
     * {
       margin: 0;
       padding: 0;
@@ -16,6 +16,7 @@
       font-family: Arial, Helvetica, sans-serif;
     }
 
+    /* Ocupa el alto total de la pantalla y oculta la barra de desplazamiento horizontal */
     body {
       display: flex;
       flex-direction: column;
@@ -25,12 +26,13 @@
       background-color: #ffffff;
     }
 
-    /* Estilos del Encabezado y Navegación */
+    /* La barra gris de arriba donde va el menú */
     header {
       background-color: #8c8c8c;
       padding: 6px 10px;
     }
 
+    /* Quita las viñetas y pone los botones a lo ancho */
     nav ul {
       list-style: none;
       display: flex;
@@ -38,6 +40,7 @@
       align-items: center;
     }
 
+    /* Estilo del texto para los enlaces del menú */
     nav a {
       color: #ffffff;
       text-decoration: none;
@@ -49,6 +52,7 @@
       display: block;
     }
 
+    /* Botón redondeado para señalar en qué página estás parado */
     nav a.active {
       background-color: #b3b3b3;
       border-radius: 12px;
@@ -56,7 +60,7 @@
       box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2);
     }
 
-    /* Estilos del Contenedor Tipo Bandera */
+    /* Contenedor que junta las 3 franjas verticales simulando la bandera */
     .flag-container {
       display: flex;
       flex: 1;
@@ -64,6 +68,7 @@
       min-height: calc(100vh - 40px);
     }
 
+    /* Distribuye el espacio para que las 3 columnas midan exactamente lo mismo de ancho */
     .stripe {
       flex: 1;
       padding: 25px 20px;
@@ -73,73 +78,79 @@
       text-align: center;
     }
 
-    /* Franja Verde */
+    /* Franja izquierda (Verde) */
     .green {
       background-color: #006338;
       color: #ffffff;
     }
 
-    /* Franja Blanca */
+    /* Franja del centro (Blanca) */
     .white {
       background-color: #ffffff;
       color: #000000;
     }
 
-    /* Franja Roja */
+    /* Franja derecha (Roja) */
     .red {
       background-color: #e31b23;
       color: #ffffff;
     }
 
-    /* Títulos y Contenido de los Bloques */
+    /* Títulos grandes en la parte superior de las columnas */
     .column-title {
       font-size: 32px;
       font-weight: bold;
       margin-bottom: 25px;
     }
 
+    /* Cajas individuales que agrupan el texto con su respectiva foto */
     .content-block {
       margin-bottom: 20px;
       max-width: 90%;
     }
 
+    /* Estilo para los párrafos descriptivos */
     .content-block p {
       font-size: 13px;
       line-height: 1.4;
       margin-bottom: 8px;
     }
 
+    /* Resalta los títulos de los mitos en negrita */
     .myth-title {
       font-weight: bold;
       font-size: 14px;
       margin-bottom: 6px;
     }
 
+    /* Formato para el texto explicativo de la realidad del mito */
     .myth-reality {
       font-size: 12px;
       line-height: 1.35;
     }
 
-    /* Estilos de Imágenes */
+    /* Ajuste general de tamaño, bordes y sombra para todas las imágenes */
     .info-img {
       max-width: 250px;
       max-height: 150px;
-      object-fit: cover;
+      object-fit: cover; /* Evita que la foto se estire o desproporcione */
       border-radius: 4px;
       margin: 10px auto 15px auto;
       display: block;
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
 
+    /* Borde claro para que las imágenes resalten sobre fondos oscuros (verde y rojo) */
     .green .info-img, .red .info-img {
       border: 1px solid rgba(255,255,255,0.4);
     }
 
+    /* Borde gris para la franja blanca */
     .white .info-img {
       border: 1px solid #ccc;
     }
 
-    /* Footer con Datos del Alumno */
+    /* Empuja los datos del alumno hacia la parte de abajo a la derecha de la franja roja */
     .footer-info {
       color: #ffffff;
       font-size: 12px;
@@ -154,24 +165,23 @@
 </head>
 <body>
 
-
-  <!-- ENCABEZADO Y MENÚ DE NAVEGACIÓN            -->
-
+  <!-- Menú de navegación superior -->
   <header>
     <nav>
       <ul>
         <li><a href="index.html">INICIO</a></li>
         <li><a href="fechas.html">FECHAS IMPORTANTES</a></li>
         <li><a href="personajes.html">PERSONAJES ILUSTRADOS</a></li>
+        <!-- La clase "active" resalta en cuál página te encuentras -->
         <li><a href="datos.html" class="active">DATOS CURIOSOS Y MITOS</a></li>
       </ul>
     </nav>
   </header>
 
-    <!-- ESTRUCTURA PRINCIPAL DE BANDERA            -->
+  <!-- Estructura dividida en 3 columnas emulando la bandera -->
   <main class="flag-container">
 
-    <!-- 1. FRANJA VERDE DATOS CURIOSOS -->
+    <!-- 1. Franja Verde: Sección de Datos Curiosos -->
     <section class="stripe green">
       <h2 class="column-title">Datos Curiosos</h2>
 
@@ -186,7 +196,7 @@
       </div>
     </section>
 
-    <!-- 2. FRANJA BLANCA DATOS Y MITOS -->
+    <!-- 2. Franja Blanca: Combinación de Dato e Historia de Mito -->
     <section class="stripe white">
       <div class="content-block" style="margin-top: 10px;">
         <p><strong>El impacto de los dinosaurios:</strong> El asteroide que provocó la extinción de los dinosaurios cayó en Chicxulub, Yucatán, formando también la red de cenotes.</p>
@@ -200,7 +210,7 @@
       </div>
     </section>
 
-    <!-- 3. FRANJA ROJA: MITOS DESMENTIDOS Y DATOS DEL ALUMNO -->
+    <!-- 3. Franja Roja: Mitos Desmentidos y tus Datos de Alumno -->
     <section class="stripe red">
       <h2 class="column-title">Mitos Desmentidos</h2>
 
@@ -215,7 +225,7 @@
         <img src="hernan_cortes.png" alt="Hernán Cortés" class="info-img">
       </div>
 
-      <!-- Footer Datos del Alumno -->
+      <!-- Datos del alumno al fondo de la última columna -->
       <div class="footer-info">
         <p>RAMOS FLORES PEDRO ALEXIS</p>
         <p>5-I</p>
