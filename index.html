@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <!-- Tipo de documento e idioma -->
   <meta charset="UTF-8">
+  <!-- Hace que la pantalla se ajuste bien en celulares -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Proyecto Patria</title>
 
-  <!-- ESTILOS CSS                                -->
-
   <style>
-
+    /* Quita los espacios feos que vienen por defecto y cambia la letra */
     * {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
+      box-sizing: border-box; /* Para que los bordes no desacomoden el tamaño de las cosas */
       font-family: Arial, Helvetica, sans-serif;
     }
 
+    /* Ocupa toda la pantalla completa y evita que salga la barra de desplazamiento */
     body {
       display: flex;
       flex-direction: column;
@@ -23,12 +24,13 @@
       overflow: hidden;
     }
 
-    /* Estilos del Encabezado y Menú */
+    /* La barrita de arriba en color gris */
     header {
       background-color: #8c8c8c;
       padding: 6px 10px;
     }
 
+    /* Quita los puntos de la lista y pone los botones uno al lado del otro */
     nav ul {
       list-style: none;
       display: flex;
@@ -36,6 +38,7 @@
       align-items: center;
     }
 
+    /* Estilo de los textos del menú: blanco, mayusculas y esquinas redondeadas */
     nav a {
       color: #ffffff;
       text-decoration: none;
@@ -48,26 +51,27 @@
       border-radius: 12px;
     }
 
+    /* Cambia a gris claro cuando pasas el mouse por encima */
     nav a:hover, nav a:focus {
       background-color: #b3b3b3;
       box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2);
     }
 
-    /* Estilos del Contenedor de Páginas */
+    /* El cuadro que muestra las páginas abajo del menú */
     iframe {
       width: 100%;
-      height: calc(100vh - 37px);
+      height: calc(100vh - 37px); /* Ocupa lo que queda de pantalla le restando la barra de arriba */
       border: none;
     }
   </style>
 </head>
 <body>
 
-
-  <!-- ENCABEZADO Y MENÚ DE NAVEGACIÓN            -->
+  <!-- Menú superior -->
   <header>
     <nav>
       <ul>
+        <!-- El target "contenedor" dice que al dar clic se abra otro apartado -->
         <li><a href="inicio.html" target="contenedor">INICIO</a></li>
         <li><a href="fechas.html" target="contenedor">FECHAS IMPORTANTES</a></li>
         <li><a href="personajes.html" target="contenedor">PERSONAJES ILUSTRADOS</a></li>
@@ -76,7 +80,7 @@
     </nav>
   </header>
 
-  <!-- CONTENEDOR PRINCIPAL  -->
+  <!-- Cuadro donde se van a cargar las otras páginas de la web -->
   <iframe name="contenedor" src="inicio.html"></iframe>
 
 </body>
