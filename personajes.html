@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <!-- Para que se lean los acentos, letras ñ y otros caracteres -->
   <meta charset="UTF-8">
+  <!-- Adapta el diseño al tamaño de la pantalla en celulares -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Personajes Ilustrados</title>
 
-  <!-- ESTILOS CSS                                -->
   <style>
+    /* Quita los espacios feos por defecto y evita que las cajas se deformen con los bordes */
     * {
       margin: 0;
       padding: 0;
@@ -14,6 +16,7 @@
       font-family: Arial, Helvetica, sans-serif;
     }
 
+    /* Ocupa toda la pantalla completa sin mostrar la barra de desplazamiento horizontal */
     body {
       display: flex;
       flex-direction: column;
@@ -23,12 +26,13 @@
       background-color: #ffffff;
     }
 
-    /* Estilos de la barra de navegación */
+    /* La barra gris de arriba */
     header {
       background-color: #8c8c8c;
       padding: 6px 10px;
     }
 
+    /* Quita las viñetas y acomoda los botones del menú de lado a lado */
     nav ul {
       list-style: none;
       display: flex;
@@ -36,6 +40,7 @@
       align-items: center;
     }
 
+    /* Estilos del texto para los enlaces del menú */
     nav a {
       color: #ffffff;
       text-decoration: none;
@@ -47,6 +52,7 @@
       display: block;
     }
 
+    /* Botón redondeado que indica la página activa donde estás parado */
     nav a.active {
       background-color: #b3b3b3;
       border-radius: 12px;
@@ -54,7 +60,7 @@
       box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2);
     }
 
-    /* Estilos del contenedor estilo Bandera */
+    /* Contenedor que junta las 3 franjas simulando la bandera */
     .flag-container {
       display: flex;
       flex: 1;
@@ -62,16 +68,17 @@
       min-height: calc(100vh - 40px);
     }
 
+    /* Hace que las 3 columnas midan exactamente lo mismo de ancho */
     .stripe {
       flex: 1;
     }
 
-    /* Franja Verde */
+    /* Primera franja (Verde) */
     .green {
       background-color: #006338;
     }
 
-    /* Franja Blanca y Tarjetas de Personajes */
+    /* Franja del centro (Blanca) donde se acomodan los personajes verticalmente */
     .white {
       background-color: #ffffff;
       display: flex;
@@ -81,25 +88,28 @@
       padding: 20px 15px;
     }
 
+    /* Caja individual que junta la foto con la información del personaje */
     .character-card {
       display: flex;
       align-items: center;
-      gap: 15px;
+      gap: 15px; /* Espacio entre la imagen y el texto */
       width: 100%;
       max-width: 520px;
       margin: 10px 0;
     }
 
+    /* Tamaño, borde suave y sombra de las imágenes de los personajes */
     .character-img {
       width: 150px;
       height: 165px;
-      object-fit: cover;
+      object-fit: cover; /* Evita que la foto se estire feo */
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
       border: 1px solid #e0e0e0;
-      flex-shrink: 0;
+      flex-shrink: 0; /* Impide que la imagen se aplaste si no hay espacio */
     }
 
+    /* Texto con la biografía del personaje */
     .character-text {
       font-size: 11px;
       font-weight: bold;
@@ -109,7 +119,7 @@
       flex: 1;
     }
 
-    /* Franja Roja y Datos del Alumno */
+    /* Tercera franja (Roja) que empuja mis datos hasta la esquina de abajo */
     .red {
       background-color: #e31b23;
       display: flex;
@@ -118,6 +128,7 @@
       padding: 20px;
     }
 
+    /* Formato de texto para mis datos */
     .footer-info {
       color: #ffffff;
       font-size: 12px;
@@ -130,30 +141,29 @@
 </head>
 <body>
 
-
-  <!-- ENCABEZADO Y MENÚ DE NAVEGACIÓN            -->
+  <!-- Menú de navegación superior -->
   <header>
     <nav>
       <ul>
         <li><a href="index.html">INICIO</a></li>
         <li><a href="fechas.html">FECHAS IMPORTANTES</a></li>
+        <!-- La clase "active" resalta esta pestaña -->
         <li><a href="personajes.html" class="active">PERSONAJES ILUSTRADOS</a></li>
         <li><a href="datos.html">DATOS CURIOSOS Y MITOS</a></li>
       </ul>
     </nav>
   </header>
 
-
-  <!-- ESTRUCTURA PRINCIPAL DE LA BANDERA            -->
+  <!-- Estructura principal dividida en 3 columnas como la bandera -->
   <main class="flag-container">
     
-    <!-- FRANJA VERDE -->
+    <!-- Franja Verde -->
     <section class="stripe green"></section>
 
-    <!-- FRANJA BLANCA: TARJETAS DE PERSONAJES -->
+    <!-- Franja Blanca con la lista de personajes -->
     <section class="stripe white">
 
-      <!-- Personaje Benito Juárez -->
+      <!--  Benito Juárez (Imagen a la izquierda, texto a la derecha) -->
       <article class="character-card">
         <img src="Benito.png" alt="Benito Juárez" class="character-img">
         <p class="character-text">
@@ -161,7 +171,7 @@
         </p>
       </article>
 
-      <!-- Personaje Emiliano Zapata -->
+      <!-- Emiliano Zapata (Texto a la izquierda, imagen a la derecha) -->
       <article class="character-card">
         <p class="character-text">
           <strong>Emiliano Zapata (1879-1919)</strong>, conocido como el «Caudillo del Sur», fue uno de los principales líderes de la Revolución Mexicana. Defensor de los derechos campesinos, promulgó el Plan de Ayala para exigir la devolución de tierras a los pueblos originarios y popularizó el célebre lema: «Tierra y Libertad».
@@ -169,7 +179,7 @@
         <img src="Zapata.png" alt="Emiliano Zapata" class="character-img">
       </article>
 
-      <!-- Personaje Miguel Hidalgo -->
+      <!--  Miguel Hidalgo (Imagen a la izquierda, texto a la derecha) -->
       <article class="character-card">
         <img src="Hidalgo.png" alt="Miguel Hidalgo" class="character-img">
         <p class="character-text">
@@ -177,7 +187,7 @@
         </p>
       </article>
 
-      <!-- Personaje Porfirio Díaz -->
+      <!-- Porfirio Díaz (Texto a la izquierda, imagen a la derecha) -->
       <article class="character-card">
         <p class="character-text">
           <strong>Porfirio Díaz</strong> fue el militar y presidente que gobernó México por más de 30 años (el Porfiriato); impulsó la modernización, la industria y los ferrocarriles, pero su régimen autoritario y la desigualdad social detonaron la Revolución Mexicana.
@@ -187,7 +197,7 @@
 
     </section>
 
-   <!--Footer con datos de alumno-->
+    <!-- Franja Roja con mis datos abajo a la derecha -->
     <section class="stripe red">
       <div class="footer-info">
         <p>RAMOS FLORES PEDRO ALEXIS</p>
