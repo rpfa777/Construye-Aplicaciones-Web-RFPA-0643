@@ -2,21 +2,20 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <!-- Para que se adapte bien en pantallas de celulares -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Patria - Inicio</title>
 
-
-  <!-- ESTILOS CSS                                -->
-
   <style>
-
+    /* Quita los espacios feos que traen los navegadores y cambia la letra */
     * {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
+      box-sizing: border-box; /* Para que los bordes no alteren el tamaño de los elementos */
       font-family: Arial, Helvetica, sans-serif;
     }
 
+    /* Ocupa toda la pantalla y evita que salga la barra de desplazamiento */
     body {
       display: flex;
       flex-direction: column;
@@ -26,12 +25,13 @@
       background-color: #ffffff;
     }
 
-    /* Estilos de la Barra de Navegación */
+    /* La barra gris de arriba */
     header {
       background-color: #8c8c8c;
       padding: 6px 10px;
     }
 
+    /* Quita los puntos de la lista y pone los botones a lo ancho */
     nav ul {
       list-style: none;
       display: flex;
@@ -39,6 +39,7 @@
       align-items: center;
     }
 
+    /* Texto de los botones del menú */
     nav a {
       color: #ffffff;
       text-decoration: none;
@@ -50,6 +51,7 @@
       display: block;
     }
 
+    /* Marca cuál opción del menú está seleccionada actualmente */
     nav a.active {
       background-color: #b3b3b3;
       border-radius: 12px;
@@ -57,24 +59,25 @@
       box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2);
     }
 
-    /* Estilos del Contenedor Principal (Bandera) */
+    /* Contenedor que acomoda las 3 franjas lado a lado */
     .flag-container {
       display: flex;
       flex: 1;
       width: 100%;
     }
 
+    /* Hace que cada franja mida exactamente lo mismo de ancho */
     .stripe {
       flex: 1;
       height: 100%;
     }
 
-    /* Franja Verde */
+    /* Color de la primera franja */
     .green {
       background-color: #006847;
     }
 
-    /* Franja Blanca y Contenido Central */
+    /* Franja central blanca y acomodo del contenido al centro */
     .white {
       background-color: #ffffff;
       display: flex;
@@ -85,12 +88,14 @@
       padding: 20px;
     }
 
+    /* Para cuando se usan imágenes pequeñas */
     .flag-img {
       max-width: 90px;
       height: auto;
       margin-bottom: 15px;
     }
 
+    /* Tamaño de la fecha del titulo */
     .date-title {
       font-size: 20px;
       font-weight: 900;
@@ -98,9 +103,11 @@
       margin-bottom: 20px;
     }
 
+    /* Colores para dividir el texto entre verde y rojo */
     .text-green { color: #006847; }
     .text-red { color: #ce1126; }
 
+    /* Estilo del título en letras doradas del titulo */
     .main-title {
       font-family: 'Times New Roman', Times, serif;
       color: #c49219;
@@ -111,7 +118,7 @@
       letter-spacing: 1px;
     }
 
-    /* Franja Roja y Datos de Alumno */
+    /* Franja roja con los datos mandados a la esquina inferior derecha */
     .red {
       background-color: #ce1126;
       display: flex;
@@ -120,6 +127,7 @@
       padding: 20px;
     }
 
+    /* Formato de texto para los datos del alumno */
     .author-info {
       color: #ffffff;
       font-size: 12px;
@@ -132,10 +140,11 @@
 </head>
 <body>
 
-  <!-- ENCABEZADO Y MENÚ DE NAVEGACIÓN            -->
+  <!-- Menú de navegación superior -->
   <header>
     <nav>
       <ul>
+        <!-- La clase "active" resalta en qué página estás -->
         <li><a href="index.html" class="active">INICIO</a></li>
         <li><a href="fechas.html">FECHAS IMPORTANTES</a></li>
         <li><a href="personajes.html">PERSONAJES ILUSTRADOS</a></li>
@@ -144,32 +153,31 @@
     </nav>
   </header>
 
-  <!-- ESTRUCTURA PRINCIPAL DE BANDERA            -->
-
+  <!-- Contenedor general que simula la bandera -->
   <main class="flag-container">
 
-    <!-- 1. FRANJA VERDE -->
+    <!--  Franja Verde -->
     <section class="stripe green"></section>
 
-    <!-- 2. FRANJA BLANCA: LOGO FECHA Y TÍTULO -->
+    <!--  Franja Blanca con la imagen y los títulos -->
     <section class="stripe white">
 
-      <!-- Imagen de mexico -->
+      <!-- Imagen del centro -->
       <img src="mexico.png" width="450" height="250" alt="Bandera">
 
-      <!-- Fecha de titulo -->
+      <!-- Texto de la fecha con colores combinados -->
       <div class="date-title">
         <span class="text-green">16 DE SEPT</span><span class="text-red">IEMBRE</span>
       </div>
 
-      <!-- Título Principal -->
+      <!-- Título principal -->
       <h1 class="main-title">
         DÍA DE LA<br>INDEPENDENCIA
       </h1>
 
     </section>
 
-    <!-- 3. Footer DATOS DE ALUMNO -->
+    <!-- Franja Roja con mis datos abajo a la derecha -->
     <section class="stripe red">
       <div class="author-info">
         <p>RAMOS FLORES PEDRO ALEXIS</p>
